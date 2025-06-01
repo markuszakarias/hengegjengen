@@ -1,20 +1,21 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter, Caveat } from "next/font/google";
 import "./globals.css";
+import Navigation from "../components/navigation";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const caveat = Caveat({
+  variable: "--font-caveat",
   subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
-  title: "Hengegjengen",
-  description: "Hyttetur i Sverige",
+  title: "Hengegjengen - Girls Trip Hub",
+  description: "Plan the perfect girls trip to Sweden",
 };
 
 export default function RootLayout({
@@ -25,9 +26,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${inter.variable} ${caveat.variable} antialiased min-h-screen bg-background`}
       >
-        {children}
+        <Navigation />
+        <main className="flex-1">{children}</main>
       </body>
     </html>
   );
