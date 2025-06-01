@@ -22,8 +22,10 @@ export default function TravelPlan() {
         <Card className="mb-12">
           <CardContent className="p-6">
             <div className="grid grid-rows-3 gap-6">
-              <div className="flex items-center space-x-3">
-                <Calendar className="w-5 h-5 text-primary" />
+              <div className="flex items-start space-x-6">
+                <div className="p-3 bg-primary/10 rounded-lg">
+                  <Calendar className="w-5 h-5 text-primary" />
+                </div>
                 <div>
                   <p className="text-xl font-bold">Avreisedato</p>
                   <p className="text-sm text-muted-foreground">
@@ -32,8 +34,10 @@ export default function TravelPlan() {
                 </div>
               </div>
 
-              <div className="flex items-center space-x-3">
-                <MapPin className="w-5 h-5 text-primary" />
+              <div className="flex items-start space-x-6">
+                <div className="p-3 bg-primary/10 rounded-lg">
+                  <MapPin className="w-5 h-5 text-primary" />
+                </div>
                 <div>
                   <p className="text-xl font-bold">Adresse</p>
                   <p className="text-sm text-muted-foreground">
@@ -42,14 +46,16 @@ export default function TravelPlan() {
                 </div>
               </div>
 
-              <div className="flex items-center space-x-3">
-                <ShoppingCart className="w-5 h-5 text-primary" />
+              <div className="flex items-start space-x-6">
+                <div className="p-3 bg-primary/10 rounded-lg">
+                  <ShoppingCart className="w-5 h-5 text-primary" />
+                </div>
                 <div>
                   <p className="text-xl font-bold">Mathandel</p>
                   <p className="text-sm text-muted-foreground">
                     Coop Tanum. Fredag er nasjonaldagen til Sverige og byr
-                    derfor på stengte butikker. Vi handler det viktige i Tanum,
-                    ellers resten lørdag.
+                    derfor på stengte butikker / vinmonopolet. Vi handler det
+                    viktigste i Tanum på vei til hytta, ellers resten lørdag.
                   </p>
                 </div>
               </div>
@@ -63,81 +69,25 @@ export default function TravelPlan() {
               <div className="p-2 bg-purple-100 dark:bg-purple-900/20 rounded-lg">
                 <Car className="w-6 h-6 text-purple-600 dark:text-purple-400" />
               </div>
-              <span>Transport</span>
+              <p className="text-xl font-bold">Reiserute Oslo → Hamburgsund</p>
             </CardTitle>
           </CardHeader>
 
           <CardContent className="space-y-4">
-            <Card className="bg-accent/50">
-              <CardContent className="p-4">
-                <h3 className="font-medium mb-2">Airport Transfer</h3>
-                <p className="text-sm text-muted-foreground mb-1">
-                  Stockholm Airport → Accommodation
-                </p>
-                <p className="text-sm text-muted-foreground">Method: TBD</p>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-accent/50">
-              <CardContent className="p-4">
-                <h3 className="font-medium mb-2">Local Transportation</h3>
-                <p className="text-sm text-muted-foreground mb-1">
-                  Car rental or public transport
-                </p>
-                <p className="text-sm text-muted-foreground">
-                  Duration: 7 days
-                </p>
-              </CardContent>
-            </Card>
-
-            <div className="mt-6">
-              <h3 className="font-medium mb-3">Oslo → Hamburgsund</h3>
-              <div className="relative w-full h-80 rounded-lg overflow-hidden border">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d1008281.7460113543!2d10.746847049999999!3d59.31333850000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x46416e61f267f039%3A0x7e92605fd3231e9a!2sOslo%2C%20Norway!3m2!1d59.9138688!2d10.7522454!4m5!1s0x6648a6c6ed834b05%3A0x401e1b68b4e847!2sKl%C3%A4desholmen%201%2C%20457%2048%20Hamburgsund%2C%20Sweden!3m2!1d58.628956399999995!2d11.2442807!5e0!3m2!1sen!2sno!4v1703123456789!5m2!1sen!2sno"
-                  width="100%"
-                  height="100%"
-                  style={{ border: 0 }}
-                  allowFullScreen
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                ></iframe>
-              </div>
+            <div className="relative w-full h-80 rounded-lg overflow-hidden border">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m34!1m12!1m3!1d1008281.7460113543!2d10.746847049999999!3d59.31333850000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m19!3e6!4m5!1s0x46416e61f267f039%3A0x7e92605fd3231e9a!2sOslo%2C%20Norway!3m2!1d59.9138688!2d10.7522454!4m5!1s0x6648a43663531c77%3A0x8a78ad4a99f09fbb!2sCoop%20Tanum%2C%20Tanum%2C%20Sweden!3m2!1d58.727959999999996!2d11.324972!4m5!1s0x6648a6c6ed834b05%3A0x401e1b68b4e847!2sKl%C3%A4desholmen%201%2C%20457%2048%20Hamburgsund%2C%20Sweden!3m2!1d58.628956399999995!2d11.2442807!5e0!3m2!1sen!2sno!4v1703123456789!5m2!1sen!2sno"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
             </div>
           </CardContent>
         </Card>
       </div>
-
-      {/* Travel Documents Section */}
-      <Card className="mt-12">
-        <CardHeader>
-          <CardTitle>Travel Documents & Requirements</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <div className="grid md:grid-cols-2 gap-6">
-            <div className="space-y-4">
-              <h3 className="font-medium text-primary">Required Documents</h3>
-              <ul className="space-y-2 text-sm text-muted-foreground">
-                <li>✓ Valid passport or EU ID</li>
-                <li>✓ Travel insurance</li>
-                <li>• Flight confirmations</li>
-                <li>• Accommodation bookings</li>
-                <li>• Emergency contact information</li>
-              </ul>
-            </div>
-            <div className="space-y-4">
-              <h3 className="font-medium text-primary">Sweden Travel Tips</h3>
-              <ul className="space-y-2 text-sm text-muted-foreground">
-                <li>• Currency: Swedish Krona (SEK)</li>
-                <li>• Language: Swedish (English widely spoken)</li>
-                <li>• Time zone: CET (UTC+1)</li>
-                <li>• Emergency number: 112</li>
-                <li>• Tipping: 10% in restaurants</li>
-              </ul>
-            </div>
-          </div>
-        </CardContent>
-      </Card>
     </div>
   );
 }
