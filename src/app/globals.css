@@ -145,3 +145,18 @@
     line-height: 1.2;
   }
 }
+
+/* Slideshow animation for background images */
+@keyframes slideshow {
+  0%,
+  16.66% {
+    opacity: 1;
+  }
+  20%,
+  96.66% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
